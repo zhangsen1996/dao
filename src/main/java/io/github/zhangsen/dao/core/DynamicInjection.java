@@ -1,4 +1,4 @@
-package io.zhangsen.dao.core;
+package io.github.zhangsen.dao.core;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.MutablePropertyValues;
