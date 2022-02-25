@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dao" />
+        <module name="mongo-db" />
+        <module name="mongodb-spring-boot-starter" />
+        <module name="dao-mongodb-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />

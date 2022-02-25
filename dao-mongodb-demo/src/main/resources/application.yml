@@ -1,0 +1,9 @@
+#mongoTemplate 配置
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/zhangsen
+
+#组件配置
+mongodb:
+  threadNum: 2
