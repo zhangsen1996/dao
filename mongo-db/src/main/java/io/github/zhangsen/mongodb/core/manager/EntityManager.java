@@ -6,16 +6,18 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
+import java.util.concurrent.ExecutorService;
+
 public class EntityManager<Id, EntityClass extends AbstractEntity<Id>> {
 
-
     private MongoTemplate mongoTemplate;
-
 
     private Class<EntityClass> entityClass;
 
     private String managerName;
 
+    //持久化线程
+    private ExecutorService executorService;
 
     public EntityManager(String entityManagerName,MongoTemplate mongoTemplate, Class<EntityClass> entityClass) {
         this.mongoTemplate = mongoTemplate;
@@ -35,6 +37,10 @@ public class EntityManager<Id, EntityClass extends AbstractEntity<Id>> {
         entity = supplier.get(id);
 
         return entity;
+    }
+
+    protected void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
     }
 
     public String getManagerName() {
