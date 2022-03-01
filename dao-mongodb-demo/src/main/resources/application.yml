@@ -7,3 +7,5 @@ spring:
 #组件配置
 mongodb:
   threadNum: 2
+  closeClassKey: true
+  simplifyDoc: true

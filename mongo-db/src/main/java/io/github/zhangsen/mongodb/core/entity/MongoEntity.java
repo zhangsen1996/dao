@@ -8,4 +8,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MongoEntity {
+    int cacheSize() default 100;
 }
